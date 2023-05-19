@@ -1,0 +1,498 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: rgb(179, 179, 179);
+  color: #222;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+  
+} 
+ 
+header{
+  position: relative;
+
+}
+
+.wrapper {
+  width: 70%;
+  margin: 50px auto;
+}
+
+.brain{
+  width: 70px;
+  opacity: 80%;
+}
+
+.name{
+  font-size: 30px;
+  padding-left: 20%;
+}
+
+
+header .logo { 
+  font-weight: 1000;
+  font-size: 50px;
+  color: rgb(255, 145, 0);
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+  font-style: italic;
+  letter-spacing: 1px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+header .logo:hover{
+  color: rgb(116, 67, 250);
+    text-shadow: 2px 2px 8px rgba(255,0,0,0.6);
+    transform: scale(1.1);
+}
+
+ul.nav {
+  float: right;
+  list-style: none;
+  position: relative;
+}
+
+ul.nav li {
+  display: inline;
+  margin-left: 25px;
+  cursor: pointer;
+  transition: opacity 300ms ease;
+}
+
+ul.nav li:hover {
+  opacity: 0.5;
+}
+
+ul.log {
+  float: right;
+  position: relative;
+  bottom: 20px;
+  font-size: large;
+}
+
+ul.log li {
+  display: inline;
+  margin-left: 25px;
+  cursor: pointer;
+  transition: opacity 300ms ease;
+}
+
+ul.log li:hover {
+  opacity: 0.5;
+}
+
+ul.user{
+  list-style: none;
+  float: right;
+  position: relative;
+  bottom: 20px;
+  font-size: large;
+}
+
+ul.user li {
+  display: inline;
+  margin-left: 25px;
+
+}
+
+ul.user li.exit{
+  cursor: pointer;
+  transition: opacity 300ms ease;
+}
+
+ul.user li.exit:hover{
+  opacity: 0.5;
+}
+
+
+.shop-cart-button{
+
+  cursor: pointer;
+  position: relative;
+  transition: all 500ms ease;
+
+}
+
+.shop-cart-button:hover,
+.shop-cart-button.active{
+  color: greenyellow;
+  transform: scale(1.2);
+}
+
+.shop-cart{
+  position: absolute;
+  top: 70px;
+  right: 15%;
+  width: 400px;
+  border-radius: 10px;
+  background:#fafafa;
+  -webkit-box-shadow: 7px 10px 5px -4px rgba(148,148,148,1);
+  -moz-box-shadow: 7px 10px 5px -4px rgba(148,148,148,1);
+  box-shadow: 7px 10px 5px -4px rgba(148,148,148,1);
+  z-index: 100;
+  padding: 20px;
+  animation: ani 0.5s forwards;
+}
+
+@keyframes ani{
+  0% {opacity: 0;};
+  100% {opacity: 1;}
+}
+
+.order{
+  width: 50%;
+  float: left;
+  margin-bottom: 10px;
+}
+
+.order img{
+  width: 100px;
+  float: left;
+  margin-right: 20px;
+}
+
+.order h2{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.order b{
+  color: red;
+  font-weight: 600;
+}
+
+.shop-cart .empty h2{
+  font-size: 20px;
+}
+
+.shop-cart .item{
+  width: 100%;
+  float: left;
+  margin-bottom: 10px;
+}
+
+.shop-cart .item img{
+  width: 70px;
+  float: left;
+  margin-right: 20px;
+}
+
+.shop-cart .item h2{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.shop-cart .item b{
+  color: red;
+  font-weight: 600;
+}
+
+.shop-cart .item .delete-icon{
+  color: #222;
+  float: right;
+  position: relative;
+  bottom: 13px;
+  cursor: pointer;
+  transition: all 500ms ease;
+}
+
+.shop-cart .item .delete-icon:hover{
+  color: yellowgreen;
+  transform: scale(1.3);
+}
+
+.shop-cart .summ{
+  float: right;
+  width: 100%;
+  font-weight: 600;
+  font-size: 25px;
+}
+
+.red{
+  float: right;
+  position: relative;
+  top: -300px;
+}
+
+.red > input {
+  width: 250px;
+}
+
+.account .admin {
+  width: 42%;
+}
+
+.account .admin > div{
+  display: inline-flex;
+  padding: 20px;
+}
+
+.admin-item{
+  position: relative;
+}
+
+
+header .presentation {
+
+  margin-top: 40px;
+  background-image: url('./img/photo-1494059980473-813e73ee784b.jpg');
+  background-position: center;
+  height: 125px;
+  width: 100%;
+  opacity: 70%;
+  margin-bottom: 30px;
+}
+
+.categories div{
+  display: inline-block;
+  background: #cfcfcf;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin-bottom: 25px;
+  margin-right: 15px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 500ms ease;
+}
+
+.categories div:hover{
+  border-color: red;
+  transform: scale(1.1);
+}
+
+.info, .about, .contacts, .login, .reg, .balance, .account{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  overflow: auto;
+}
+
+.info > div {
+  width: 30%;
+  position: relative;
+  margin: 5% auto;
+  padding: 40px 30px;
+  background: #fff;
+  border-radius: 10px;
+  animation: ani 0.5s forwards;
+
+}
+
+.contacts > div {
+  width: 30%;
+  position: relative;
+  margin: 5% auto;
+  padding: 40px 30px;
+  background: #fff;
+  border-radius: 10px;
+  animation: ani 0.5s forwards;
+
+}
+
+.about > div {
+  width: 32%;
+  position: relative;
+  margin: 5% auto;
+  padding: 40px 30px;
+  background: #fff;
+  border-radius: 10px;
+  animation: ani 0.5s forwards;
+
+}
+
+.login > div {
+  width: 15%;
+  position: relative;
+  margin: 5% auto;
+  padding: 40px 30px;
+  background: #fff;
+  border-radius: 10px;
+  animation: ani 0.5s forwards;
+
+}
+
+.reg > div {
+  width: 15%;
+  position: relative;
+  margin: 5% auto;
+  padding: 40px 30px;
+  background: #fff;
+  border-radius: 10px;
+  animation: ani 0.5s forwards;
+
+}
+
+.balance > div {
+  width: 15%;
+  position: relative;
+  margin: 5% auto;
+  padding: 40px 30px;
+  background: #fff;
+  border-radius: 10px;
+  animation: ani 0.5s forwards;
+
+}
+
+.account > div {
+  width: 40%;
+  position: relative;
+  
+  margin: 5% auto;
+  padding: 40px 30px;
+  background: #fff;
+  border-radius: 10px;
+  animation: ani 0.5s forwards;
+}
+
+input{
+  font-size: medium;
+  font-family: 'Roboto Slab', serif;
+}
+
+
+
+main{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+}
+
+main .item{
+  width: 30%;
+  height: auto;
+  margin-bottom: 50px;
+  background: #cfcfcf;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 20px;
+  border-radius: 10px;
+}
+
+main .item img, .info img{
+  width: 100%;
+  border-radius: 10px 10px 10px 10px;
+  transition: transform 300ms ease;
+  cursor: pointer;
+}
+
+
+
+main .item img:hover,
+.info img:hover {
+  transform: scale(1.05);
+}
+
+
+
+main p, main h2 ,
+.info b, .info p, .info h2{
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-left: 20px;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+main b {
+  color: rgb(187, 0, 0);
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+.youror{
+  top: 200px;
+  position: relative;
+}
+
+.info b {
+  color: rgb(187, 0, 0);
+  font-size: 30px;
+}
+
+main .add-to-cart {
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+  background: rgb(14, 167, 0);
+  width: 130px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  color: #fff;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: transform 300ms ease;
+}
+
+.buy-button{
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  background: rgb(14, 167, 0);
+  width: 130px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  color: #fff;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: transform 300ms ease;
+}
+
+.buy-button:hover{
+  transform: scale(1.2);
+}
+
+.info .add-to-cart{
+  float: right;
+  right: 20px;
+  bottom: 10px;
+  background: rgb(14, 167, 0);
+  width: 130px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  color: #fff;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: transform 300ms ease;
+}
+
+main .add-to-cart:hover,
+.info .add-to-cart:hover{
+  transform: scale(1.2);
+}
+
+.close-button{
+  float: right;
+  position: relative;
+  top: -10px;
+  cursor: pointer;
+  transition: transform 500ms ease;
+}
+
+.close-button:hover {
+  transform: scale(1.3);
+  color: rgb(14, 167, 0);
+}
+ 
+footer {
+  text-align: right;
+  margin-top: 100px;
+  margin-right: -250px;
+  margin-bottom: -30px;
+}
